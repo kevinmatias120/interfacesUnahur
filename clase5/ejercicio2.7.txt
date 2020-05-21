@@ -1,0 +1,9 @@
+async function getProcessedData(url) {
+  try{
+   cons data = async dowloadData(url)
+   cons res = async processDataInWorker(data)
+   return res
+  }catch(e){
+    throw downloadFallbackData(url)
+  }
+}
